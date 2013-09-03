@@ -1,0 +1,23 @@
+<h3> Sign Up </h3>
+<div id="signup_form">
+    <%= link_to image_tag("social_tw.png", alt: "Sign in with Twitter"), "/auth/twitter" %>
+    <%= link_to image_tag("social_fb.png", alt: "Sign in with Facebook"), "/auth/facebook" %> </br>
+    OR
+      <%= form_for(@user) do |f| %>
+        <%= f.text_field :username, :value=>"",:placeholder => "Username", :autofocus => true%>
+        <br />
+        <%= f.email_field :email, :value=>"",:placeholder => "your@email.com"%>
+        <br />
+        <%= f.password_field :password, :value=>"",:placeholder => "Password" %>
+        <br />
+        <%= f.password_field :password_confirmation, :value=>"",:placeholder => "Password Confirmation" %>
+        
+        <%= f.button "Sign up" %>
+
+      <% end %>
+</div>
+
+
+  
+
+

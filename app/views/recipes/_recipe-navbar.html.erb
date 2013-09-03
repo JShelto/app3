@@ -1,0 +1,70 @@
+
+<%= form_tag({controller: "recipes", action: "search"}, method: :get) do %> 
+
+  <div>
+    <div class= "row">
+      <div class="large-8 columns">
+        <label for="right-label" class="right"><strong>I have</strong></label>
+        <select id="customDropdown1" name="hours" class="medium"> 
+            <option> <%= 0 %> </option> 
+            <option> <%= 1 %> </option> 
+          <% (2..10).each do |i| %> 
+            <option> <%= i %>  </option>
+          <% end %>
+        </select> hour(s)
+        <select id="customDropdown1" name="minutes" class="f-dropdown"> 
+        <option> <%= 1 %> </option>
+          <% (2..60).each do |i| %> 
+            <option><%= i %>  </option>
+          <% end %>
+        </select> minute(s)
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="small-8">
+        <div class="row">
+          <div class="small-4 columns">
+            <label for="right-label" class="right"><strong>and I want to make </strong> </label>
+          </div>
+          <div class="small-4 columns">
+            <input type="text" id="right-label" name="search" placeholder="baked ziti..."> <small> powered by <a href= "http://www.yummly.com/" style="text-decoration: none;"> Yummly </a> </small>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class= "row">
+      <div class="large-8 columns">
+        <label for="right-label" class="right"><strong>for</strong></label>
+        <select id="customDropdown2" name="courses" class="f-dropdown"> 
+            <option> </option>
+            <option> <%= "Appetizers" %> </option>
+            <option> <%= "Breakfast and Soups" %> </option>
+            <option> <%= "Beverages" %> </option>
+            <option> <%= "Cocktails" %> </option>   
+            <option> <%= "Desserts" %> </option>
+            <option> <%= "Lunch and Snacks" %> </option>
+            <option> <%= "Main Dishes" %> </option> 
+            <option> <%= "Salads" %> </option> 
+            <option> <%= "Side Dishes" %> </option>   
+        </select>
+    </div>
+
+  <%= submit_tag "Go!" %>
+
+<% end %>
+
+
+<!--     <div class= "row">
+      <div class="large-4 columns">
+        <label for="right-label" class="right"><strong>Course</strong></label>
+        <select id="customDropdown1" name="course" class="medium">
+          <option>Breakfast</option>
+          <option>Lunch</option>
+          <option>Main Dishes</option>
+          <option>Snacks</option>
+          <option>Beverages</option>
+        </select>
+      </div>
+    </div> -->

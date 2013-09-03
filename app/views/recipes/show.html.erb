@@ -1,0 +1,25 @@
+<%= render "users/navigation" %>
+<br>
+<%= render "recipe-navbar" %>
+
+<div style="background-color: #e05757"> 
+  <h1><%= @title %></h1></br>
+  <strong>Prep Time:</strong> <%= @prep %> </br>
+  Check out this recipe on <a href="<%=@site %>"> <%= @location %> </a> </br>
+  <% @img.each do |i| %>
+    <img src="<%= i["bigPic"] %>">
+  <% end %></br>
+</div>
+<div>
+    <h3>Ingredients</h3>
+    <% @ingredients.each do |l| %>
+    <li>
+      <%= l %>
+    </li>
+  <% end %>
+</div>
+<div>
+  <small><%=  raw @snippet %></small>
+</div>
+
+

@@ -1,0 +1,17 @@
+<%= render "users/navigation" %>
+<%= render "recipe-navbar" %>
+
+<div>
+
+  <h1> Recipes </h1>
+  <% @response.each do |x| %>
+    <%= link_to(:controller => "recipes", :action => "show", :id => x["recipeId"]) do %>
+      <div style="background-color: #e05757">
+        <h3> <%= x["name"] %> </h3> <br>
+        <img src="<%= x["image"] %>" height="80" width="80"> Prep time: <%= x["time"] %> minutes
+      </div> 
+    <% end %>
+  <% end %>
+    
+</div>
+
