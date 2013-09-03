@@ -11,13 +11,13 @@
           <% (2..10).each do |i| %> 
             <option> <%= i %>  </option>
           <% end %>
-        </select> hour(s)
+        </select> <strong>hour(s)</strong>
         <select id="customDropdown1" name="minutes" class="f-dropdown"> 
         <option> <%= 1 %> </option>
           <% (2..60).each do |i| %> 
             <option><%= i %>  </option>
           <% end %>
-        </select> minute(s)
+        </select> <strong>minute(s)</strong>
       </div>
     </div>
 
@@ -25,10 +25,8 @@
       <div class="small-8">
         <div class="row">
           <div class="small-4 columns">
-            <label for="right-label" class="right"><strong>and I want to make </strong> </label>
-          </div>
-          <div class="small-4 columns">
-            <input type="text" id="right-label" name="search" placeholder="baked ziti..."> <small> powered by <a href= "http://www.yummly.com/" style="text-decoration: none;"> Yummly </a> </small>
+            <label for="right-label" class="right"><strong>to make something </strong> </label>
+            <input type="text" id="right-label" name="search" placeholder="baked ziti..."><strong>-related</strong>
           </div>
         </div>
       </div>
