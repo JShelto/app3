@@ -1,4 +1,5 @@
 class RecipesController < ActionController::Base
+
   def index
     @params = params
   end
@@ -12,7 +13,7 @@ class RecipesController < ActionController::Base
     @score = params[:rating]
 
     #calls the Yummly API with search params to return an index of recipes
-    @url = URI::encode("http://api.yummly.com/v1/api/recipes?_app_id=8d5e3383&_app_key=47fc2ecd5c96686fee4cdae0725ad816&q=#{@search}&allowedCourse[]=course^course-#{@course}&maxTotalTimeInSeconds=#{@seconds}&requirePictures=true")
+    @url = URI::encode("http://api.yummly.com/v1/api/recipes?_app_id=8d5e3383&_app_key=47fc2ecd5c96686fee4cdae0725ad816&q=#{@search}&allowedCourse[]=course^course-#{@course}&maxTotalTimeInSeconds=#{@seconds}")
     @response = JSON.load(open(@url))["matches"].map {|listing| 
       {"image" => listing["smallImageUrls"].first,
       "time" => listing["totalTimeInSeconds"].to_i / 60,
@@ -35,17 +36,6 @@ class RecipesController < ActionController::Base
     @snippet = JSON.load(open(@url_y))['attribution']['html']
     @prep = JSON.load(open(@url_y))['totalTime']
 
-    
-
-    
-    # @response_y = JSON.load(open(@url_y))['source']['sourceRecipeUrl']
-
-    # #calls the the Readability API is made by passing in the sourceRecipeUrl, and extracts the content(the recipe directions)
-    # @url_r = "https://www.readability.com/api/content/v1/parser?url=#{@response_y}&token=140db5140b757f06b9f7048c1056ca77669d8b50"
-    # @response_r = JSON.load(open(@url_r))['content']
-
   end
-
-
 
 end

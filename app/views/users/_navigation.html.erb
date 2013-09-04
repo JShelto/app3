@@ -1,9 +1,8 @@
-<header>
+
 <% if current_user %>
-  Signed in as <%= current_user.username %>!
+  Signed in as <strong><%= current_user.username.capitalize %></strong>
   <%= link_to "Sign out", signout_path %>
 <% else %>
-  <%= link_to image_tag("social_tw.png", alt: "Sign in with Twitter"), "/auth/twitter" %>
-  <%= link_to image_tag("social_fb.png", alt: "Sign in with Facebook"), "/auth/facebook" %>
+    <%= link_to image_tag("sign-in-with-twitter.png", alt: "Sign in with Twitter", :width => 154, :height => 22), "/auth/twitter" %>
+    <%= link_to image_tag("sign-in-with-facebook.png", alt: "Sign in with Facebook", :width => 154, :height => 22), "/auth/facebook" %>
 <% end %>
-</header>

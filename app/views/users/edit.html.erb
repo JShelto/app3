@@ -1,11 +1,10 @@
-
-<%= form_for(@user) do |f| %>
-  <%= f.label :username %>
-  <%= f.text_field :username, :autofocus => true%>
-
-  <%= f.label :image_url %> <br />
-  <%= f.text_field :image_url %>
-
-  <%= f.submit "Update info" %>
-<% end %>
+<form>
+  <fieldset>
+    <legend>Edit User</legend>
+      <%= form_for(@user) do |f| %>
+        <%= f.label :username %>
+        <%= f.text_field :username, :autofocus => true%>
+      <% end %>
+  </fieldset>
+</form
 

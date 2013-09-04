@@ -26,7 +26,7 @@
         <div class="row">
           <div class="small-4 columns">
             <label for="right-label" class="right"><strong>to make something </strong> </label>
-            <input type="text" id="right-label" name="search" placeholder="baked ziti..."><strong>-related</strong>
+            <input type="search" id="right-label" name="search" placeholder="baked ziti..." results="0"><strong>-related</strong>
           </div>
         </div>
       </div>
@@ -36,7 +36,6 @@
       <div class="large-8 columns">
         <label for="right-label" class="right"><strong>for</strong></label>
         <select id="customDropdown2" name="courses" class="f-dropdown"> 
-            <option> </option>
             <option> <%= "Appetizers" %> </option>
             <option> <%= "Breakfast and Soups" %> </option>
             <option> <%= "Beverages" %> </option>
@@ -52,17 +51,3 @@
   <%= submit_tag "Go!" %>
 
 <% end %>
-
-
-<!--     <div class= "row">
-      <div class="large-4 columns">
-        <label for="right-label" class="right"><strong>Course</strong></label>
-        <select id="customDropdown1" name="course" class="medium">
-          <option>Breakfast</option>
-          <option>Lunch</option>
-          <option>Main Dishes</option>
-          <option>Snacks</option>
-          <option>Beverages</option>
-        </select>
-      </div>
-    </div> -->
