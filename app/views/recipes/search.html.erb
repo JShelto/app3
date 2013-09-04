@@ -5,8 +5,7 @@
 
   <h1> Recipes </h1>
   <% if @response.empty? %>
-  <p>Sorry, I couldn't find anything.
-  Maybe you need more time?</p>
+  <h1><%= blank_message -%> </h1>
   <% else %>
     <% @response.each do |x| %>
       <%= link_to(:controller => "recipes", :action => "show", :id => x["recipeId"]) do %>

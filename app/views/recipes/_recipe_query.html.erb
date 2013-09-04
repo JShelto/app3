@@ -1,53 +1,42 @@
 
 <%= form_tag({controller: "recipes", action: "search"}, method: :get) do %> 
+<div class="row">
+  <label><strong>I have</strong></label>
+  <select id="customDropdown1" name="hours" class="medium"> 
+  <option> <%= 0 %> </option> 
+  <option> <%= 1 %> </option> 
+  <% (2..10).each do |i| %> 
+  <option> <%= i %>  </option>
+  <% end %>
 
-  <div>
-    <div class= "row">
-      <div class="large-8 columns">
-        <label for="right-label" class="right"><strong>I have</strong></label>
-        <select id="customDropdown1" name="hours" class="medium"> 
-            <option> <%= 0 %> </option> 
-            <option> <%= 1 %> </option> 
-          <% (2..10).each do |i| %> 
-            <option> <%= i %>  </option>
-          <% end %>
-        </select> <strong>hour(s)</strong>
-        <select id="customDropdown1" name="minutes" class="f-dropdown"> 
-        <option> <%= 1 %> </option>
-          <% (2..60).each do |i| %> 
-            <option><%= i %>  </option>
-          <% end %>
-        </select> <strong>minute(s)</strong>
-      </div>
-    </div>
+  <label></select> <strong>hour(s)</strong>
+  <select id="customDropdown2" name="minutes" class="medium="> 
+  <option> <%= 1 %> </option>
+  <% (2..60).each do |i| %> 
+  <option><%= i %>  </option>
+  <% end %>
+  </select> <strong>minute(s)</strong>
 
-    <div class="row">
-      <div class="small-8">
-        <div class="row">
-          <div class="small-4 columns">
-            <label for="right-label" class="right"><strong>to make something </strong> </label>
-            <input type="search" id="right-label" name="search" placeholder="baked ziti..." results="0"><strong>-related</strong>
-          </div>
-        </div>
-      </div>
-    </div>
 
-    <div class= "row">
-      <div class="large-8 columns">
-        <label for="right-label" class="right"><strong>for</strong></label>
-        <select id="customDropdown2" name="courses" class="f-dropdown"> 
-            <option> <%= "Appetizers" %> </option>
-            <option> <%= "Breakfast and Soups" %> </option>
-            <option> <%= "Beverages" %> </option>
-            <option> <%= "Cocktails" %> </option>   
-            <option> <%= "Desserts" %> </option>
-            <option> <%= "Lunch and Snacks" %> </option>
-            <option> <%= "Main Dishes" %> </option> 
-            <option> <%= "Salads" %> </option> 
-            <option> <%= "Side Dishes" %> </option>   
-        </select>
-    </div>
 
-  <%= submit_tag "Go!" %>
+  <label><strong>to make something </strong> </label>
+  <input type="search" id="right-label" name="search" placeholder="baked ziti..." results="0"><strong>-related</strong>
+  <label><strong>for</strong></label>
+  <select id="customDropdown3" name="courses" class="medium"> 
+  <option> <%= "" %> </option>
+  <option> <%= "Appetizers" %> </option>
+  <option> <%= "Breakfast and Soups" %> </option>
+  <option> <%= "Beverages" %> </option>
+  <option> <%= "Cocktails" %> </option>   
+  <option> <%= "Desserts" %> </option>
+  <option> <%= "Lunch and Snacks" %> </option>
+  <option> <%= "Main Dishes" %> </option> 
+  <option> <%= "Salads" %> </option> 
+  <option> <%= "Side Dishes" %> </option>   
+  </select>
 
-<% end %>
+
+  <%= submit_tag "Go!", class: "button radius" %>
+
+  <% end %>
+</div>

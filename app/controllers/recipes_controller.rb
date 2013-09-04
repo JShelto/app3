@@ -1,4 +1,4 @@
-class RecipesController < ActionController::Base
+class RecipesController < ApplicationController
 
   def index
     @params = params
@@ -13,7 +13,12 @@ class RecipesController < ActionController::Base
     @score = params[:rating]
 
     #calls the Yummly API with search params to return an index of recipes
-    @url = URI::encode("http://api.yummly.com/v1/api/recipes?_app_id=8d5e3383&_app_key=47fc2ecd5c96686fee4cdae0725ad816&q=#{@search}&allowedCourse[]=course^course-#{@course}&maxTotalTimeInSeconds=#{@seconds}")
+    if @course.blank?
+      @url = URI::encode("http://api.yummly.com/v1/api/recipes?_app_id=8d5e3383&_app_key=47fc2ecd5c96686fee4cdae0725ad816&q=#{@search}&maxTotalTimeInSeconds=#{@seconds}")
+    else
+      @url = URI::encode("http://api.yummly.com/v1/api/recipes?_app_id=8d5e3383&_app_key=47fc2ecd5c96686fee4cdae0725ad816&q=#{@search}&allowedCourse[]=course^course-#{@course}&maxTotalTimeInSeconds=#{@seconds}")
+    end
+
     @response = JSON.load(open(@url))["matches"].map {|listing| 
       {"image" => listing["smallImageUrls"].first,
       "time" => listing["totalTimeInSeconds"].to_i / 60,
@@ -21,6 +26,7 @@ class RecipesController < ActionController::Base
       "recipeId" => listing["id"],
       "items" => listing["ingredients"]}
     }
+
   end
 
   def show

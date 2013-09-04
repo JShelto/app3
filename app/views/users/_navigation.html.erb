@@ -1,8 +1,31 @@
+<nav class="top-bar">
+  <ul class="title-area">
+    <li class="name"><h1> Crunch-Mate </h1></li>
+  </ul>
 
-<% if current_user %>
-  Signed in as <strong><%= current_user.username.capitalize %></strong>
-  <%= link_to "Sign out", signout_path %>
-<% else %>
-    <%= link_to image_tag("sign-in-with-twitter.png", alt: "Sign in with Twitter", :width => 154, :height => 22), "/auth/twitter" %>
-    <%= link_to image_tag("sign-in-with-facebook.png", alt: "Sign in with Facebook", :width => 154, :height => 22), "/auth/facebook" %>
-<% end %>
+  <section class="tob-bar-section">
+    <% if current_user %>
+      <ul class="right">
+        <li class="divider">
+          <%= link_to "Sign out", signout_path %>
+        </li>
+      </ul>
+      <ul class="right">
+        <li class="divider">
+          Signed in as <strong><%= current_user.username.capitalize %></strong>
+        </li>
+      </ul>
+    <% else %>
+      <ul class="right">
+        <li class="divider">
+          <%= link_to image_tag("sign-in-with-facebook.png", alt: "Sign in with Facebook"), "/auth/facebook" %>
+        </li>
+      </ul>
+      <ul class="right">
+        <li class="divider">
+          <%= link_to image_tag("sign-in-with-twitter.png", alt: "Sign in with Twitter"), "/auth/twitter" %>
+        </li>
+      </ul>
+    <% end %>
+  </section>
+</nav>
