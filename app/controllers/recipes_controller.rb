@@ -12,6 +12,10 @@ class RecipesController < ApplicationController
     @search = params[:search].split.join("+")
     @score = params[:rating]
 
+    if @course == "Lunch" || "Snacks"
+      @course = "Lunch and Snacks"
+    end
+
     #calls the Yummly API with search params to return an index of recipes
     if @course.blank?
       @url = URI::encode("http://api.yummly.com/v1/api/recipes?_app_id=8d5e3383&_app_key=47fc2ecd5c96686fee4cdae0725ad816&q=#{@search}&maxTotalTimeInSeconds=#{@seconds}")
