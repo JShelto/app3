@@ -1,11 +1,13 @@
 <%= render "users/navigation" %>
 <%= render "recipe_query" %>
 
-<div>
+<div class="large-12 columns">
 
   <h1> Recipes </h1>
   <% if @response.empty? %>
-  <h1><%= blank_message -%> </h1>
+  <div class="small-12 columns">
+    <center><h1><%= blank_message -%> </h1></center>
+  </div>
   <% else %>
     <% @response.each do |x| %>
       <%= link_to(:controller => "recipes", :action => "show", :id => x["recipeId"]) do %>

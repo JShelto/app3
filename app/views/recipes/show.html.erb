@@ -1,27 +1,28 @@
 <%= render "users/navigation" %>
 <br>
 <%= render "recipe_query" %>
-
-<div style="background-color: #e05757"> 
-  <h1><%= @title %></h1></br>
-  <strong>Prep Time:</strong> <%= @prep %> </br>
-  Check out this recipe on <a href="<%=@site %>"> <%= @location %> </a> </br>
-  <% @img.each do |i| %>
-    <img src="<%= i["bigPic"] %>">
-  <% end %></br>
-  <a href="https://twitter.com/share" class="twitter-share-button" data-text="Thanks to Crunch-Mate, I was able to find a recipe for <%= @title %>!" data-count="none" data-hashtags="delicious" data-dnt="true">Tweet</a>
-  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-</div>
-<div>
-    <h3>Ingredients</h3>
-    <% @ingredients.each do |l| %>
-    <li>
-      <%= l %>
-    </li>
-  <% end %>
-</div>
-<div>
-  <small><%=  raw @snippet %></small>
+<div class="row">
+  <div class="large-6 columns" style="background-color: #e05757">
+    <h1><%= @title %></h1></br>
+    <strong>Prep Time:</strong> <%= @prep %> </br>
+    Check out this recipe on <a href="<%=@site %>"> <%= @location %> </a> </br>
+    <% @img.each do |i| %>
+      <img src="<%= i["bigPic"] %>">
+    <% end %></br>
+    <a href="https://twitter.com/share" class="twitter-share-button" data-text="Thanks to Crunch-Mate, I was able to find a recipe for <%= @title %>!" data-count="none" data-hashtags="delicious" data-dnt="true">Tweet</a>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+  </div>
+  <div class="large-6 columns">
+    <center>
+      <h3>Ingredients</h3>
+      <% @ingredients.each do |l| %>
+        <li>
+          <%= l %>
+        </li>
+       <% end %>
+      <small><%=  raw @snippet %></small>
+    </center>
+  </div>
 </div>
 
 

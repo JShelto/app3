@@ -15,8 +15,8 @@
 // $em-base: 16px;
 
 // We use these to control various global styles
-// $body-bg: #fff;
-// $body-font-color: #222;
+ $body-bg: #ff7575;
+ $body-font-color: #fff;
 // $body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 // $body-font-weight: normal;
 // $body-font-style: normal;
@@ -65,7 +65,7 @@
 // Grid Variables
 //
 
-// $row-width: 62.5em;
+ $row-width: 95%;
 // $column-gutter: 1.875em;
 // $total-columns: 12;
 
@@ -88,7 +88,7 @@
 // $header-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 // $header-font-weight: bold;
 // $header-font-style: normal;
-// $header-font-color: #222;
+ $header-font-color: #fff;
 // $header-line-height: 1.4;
 // $header-top-margin: .2em;
 // $header-bottom-margin: .5em;
@@ -213,7 +213,7 @@
 // $fieldset-margin: emCalc(18px) 0;
 
 // We use these to style the legends when you use them
-// $legend-bg: #fff;
+ $legend-bg: #2ba6cb;
 // $legend-font-weight: bold;
 // $legend-padding: 0 emCalc(3px);
 
