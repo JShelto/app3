@@ -3,7 +3,7 @@
 
 <div class="large-12 columns">
 
-  <h1> Recipes </h1>
+  <center><h1> Recipes </h1></center>
   <% if @response.empty? %>
   <div class="small-12 columns">
     <center><h1><%= blank_message -%> </h1></center>
@@ -13,7 +13,10 @@
       <%= link_to(:controller => "recipes", :action => "show", :id => x["recipeId"]) do %>
         <div style="background-color: #e05757">
           <h3> <%= x["name"] %> </h3> <br>
-          <img src="<%= x["image"] %>" height="80" width="80"> Prep time: <%= x["time"] %> minutes
+          <img src="<%= x["image"] %>" height="100" width="100"> 
+          <div>
+            Prep time: <%= x["time"] %> minutes
+          </div>
         </div> 
       <% end %>
     <% end %>

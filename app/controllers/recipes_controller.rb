@@ -9,7 +9,7 @@ class RecipesController < ApplicationController
     @minutes = params[:minutes]
     @seconds = ((@hours.to_i * 60) + @minutes.to_i) * 60
     @course = params[:courses]
-    @search = params[:search].split.join("%20")
+    @search = params[:search].split.join("+")
     @score = params[:rating]
 
     #calls the Yummly API with search params to return an index of recipes

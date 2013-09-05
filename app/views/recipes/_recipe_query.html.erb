@@ -8,7 +8,7 @@
             <label for="right-label" class="left inline"><strong>I have</strong></label>
           </div>
           <div class="large-7 pull-2 columns">
-            <select id="customDropdown1" name="hours" class="small button dropdown secondary"> 
+            <select id="customDropdown1" name="hours" class="tiny button dropdown secondary"> 
               <option> <%= 0 %> </option> 
               <option> <%= 1 %> </option> 
               <% (2..10).each do |i| %> 
@@ -25,7 +25,7 @@
             <label for="right-label" class="left inline"><strong>hour(s)</strong></label>
           </div>
           <div class="large-7 pull-3 columns">
-            <select id="customDropdown2" name="minutes" class="small button dropdown secondary"> 
+            <select id="customDropdown2" name="minutes" class="tiny button dropdown secondary"> 
               <option> <%= 1 %> </option>
               <% (2..60).each do |i| %> 
               <option> <%= i %>  </option>
@@ -37,25 +37,25 @@
 
       <div class="large-4 columns">
         <div class="row">
-          <div class="large-3 columns">
+          <div class="large-2 pull-2 columns">
             <label for="right-label" class="left inline"> <strong>minute(s)</strong></label>
           </div>
-          <div class="large-4 columns">
-            <label for="right-label" class="left inline">to make something </strong> </label>
+          <div class="large-5 pull-2 columns">
+            <label for="right-label" class="left inline"><strong>to make something </strong> </label>
           </div>
-          <div class="large-5 columns">
-            <input type="search" id="right-label" name="search" placeholder="baked ziti..." results="0">
+          <div class="large-5 pull-2 columns">
+            <input type="search" name="search" placeholder="baked ziti..." results="0">
           </div>
         </div>
       </div>
 
       <div class="large-4 columns">
         <div class="row">
-          <div class="large-5 columns">
-            <label for="right-label" class="left inline">-related, for</label>
-          </div>
           <div class="large-5 pull-2 columns">
-            <select id="customDropdown3" name="courses" class="small button dropdown"> 
+            <label for="right-label" class="left inline"><strong>-related, for</strong></label>
+          </div>
+          <div class="large-5 pull-3 columns">
+            <select id="customDropdown3" name="courses" class="tiny button dropdown"> 
             <option> <%= "" %> </option>
             <option> <%= "Appetizers" %> </option>
             <option> <%= "Breakfast and Soups" %> </option>
@@ -69,7 +69,7 @@
             </select>
           </div>
           <div class="large-2 pull-2 columns">
-            <%= submit_tag "Go!", class: "button radius" %>
+            <%= submit_tag "Go!", class: "small button radius" %>
           </div>
         </div>
       </div>
