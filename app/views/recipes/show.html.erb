@@ -1,26 +1,40 @@
 <%= render "users/navigation" %>
-<br>
-<%= render "recipe_query" %>
+<%= render "recipe_query" %></br>
+
 <div class="row">
-  <div class="large-6 columns" style="background-color: #e05757">
-    <h1><%= @title %></h1></br>
-    <strong>Prep Time:</strong> <%= @prep %> </br>
-    Check out this recipe on <a href="<%=@site %>"> <%= @location %> </a> </br>
-    <% @img.each do |i| %>
-      <img src="<%= i["bigPic"] %>">
-    <% end %></br>
-    <a href="https://twitter.com/share" class="twitter-share-button" data-text="Thanks to Crunch-Mate, I was able to find a recipe for <%= @title %>!" data-count="none" data-hashtags="delicious" data-dnt="true">Tweet</a>
-    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+  <div class="large-6 columns" style="background-color: #F78D3F">
+    <center>
+      <h1><%= @title %></h1></br>
+      <strong>Prep Time:</strong> <%= @prep %> </br>
+      Check out this recipe on <a href="<%=@site %>"> <%= @location %> </a> </br>
+      <% @img.each do |i| %>
+        <img src="<%= i["bigPic"] %>">
+      <% end %></br>
+      </center>
+      <a href="https://twitter.com/share" class="twitter-share-button" data-text="Thanks to Crunch-Mate, I was able to find a recipe for <%= @title %>!" data-count="none" data-hashtags="delicious" data-dnt="true">Tweet</a>
+      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+      <a href="#" 
+        onclick="
+          window.open(
+            'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href), 
+            'facebook-share-dialog', 
+            'width=626,height=436'); 
+          return false;">
+        Share on Facebook
+      </a>
+
   </div>
   <div class="large-6 columns">
     <center>
-      <h3>Ingredients</h3>
-      <% @ingredients.each do |l| %>
-        <li>
-          <%= l %>
-        </li>
-       <% end %>
-      <small><%=  raw @snippet %></small>
+      <h3 style="color: #102E37">Ingredients</h3>
+      <ul class="no-bullet" style="color: #102E37">
+        <% @ingredients.each do |l| %>
+          <li>
+            <%= l %>
+          </li>
+         <% end %>
+        <small><%=  raw @snippet %></small>
+      </ul>
     </center>
   </div>
 </div>

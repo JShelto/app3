@@ -1,31 +1,19 @@
-<nav class="top-bar large-12 columns">
+<nav class="top-bar">
   <ul class="title-area">
-    <li class="name"><h1> Crunch-Mate </h1></li>
+    <li class="name">
+      <h1>Crunch-Mate</h1>
+    </li>
   </ul>
-
-  <section class="tob-bar-section">
-    <% if current_user %>
-      <ul class="right">
-        <li class="divider">
-          <%= link_to "Sign out", signout_path %>
-        </li>
-      </ul>
-      <ul class="right">
-        <li class="divider">
-          Signed in as <strong><%= current_user.username.capitalize %></strong>
-        </li>
-      </ul>
-    <% else %>
-      <ul class="right">
-        <li class="divider">
-          <%= link_to image_tag("sign-in-with-facebook.png", alt: "Sign in with Facebook"), "/auth/facebook" %>
-        </li>
-      </ul>
-      <ul class="right">
-        <li class="divider">
-          <%= link_to image_tag("sign-in-with-twitter.png", alt: "Sign in with Twitter"), "/auth/twitter" %>
-        </li>
-      </ul>
-    <% end %>
+  <section class="top-bar-section">
+    <ul class="right">
+      <% if current_user %>
+        <li class="divider"></li>
+        <li class="has-form">Signed in as <strong><%= link_to current_user.username.capitalize %></strong></li>
+        <li class="has-form"><%= link_to "Sign out", signout_path %></li>
+      <% else %>
+        <li><%= link_to image_tag("sign-in-with-twitter.png", alt: "Sign in with Twitter"), "/auth/twitter" %></li>
+        <li><%= link_to image_tag("sign-in-with-facebook.png", alt: "Sign in with Facebook"), "/auth/facebook" %></li>
+      <% end %>
+    </ul>
   </section>
 </nav>

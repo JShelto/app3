@@ -11,11 +11,11 @@
   <% else %>
     <% @response.each do |x| %>
       <%= link_to(:controller => "recipes", :action => "show", :id => x["recipeId"]) do %>
-        <div style="background-color: #e05757">
+        <div style="background-color: #F78D3F">
           <h3> <%= x["name"] %> </h3> <br>
           <img src="<%= x["image"] %>" height="100" width="100"> 
-          <div>
-            Prep time: <%= x["time"] %> minutes
+          <div style="color: #102E37">
+            Estimated prep time: <%= x["time"] %> minutes
           </div>
         </div> 
       <% end %>
