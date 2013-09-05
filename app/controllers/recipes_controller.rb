@@ -16,6 +16,11 @@ class RecipesController < ApplicationController
       @course = "Lunch and Snacks"
     end
 
+    if @course == "Breakfasts"
+      @course = "Breakfast and Soups"
+    end
+
+
     yumid = YUMMLY_APP_ID
     yumkey = YUMMLY_APP_KEY
 
@@ -37,6 +42,10 @@ class RecipesController < ApplicationController
   end
 
   def show
+
+    yumid = YUMMLY_APP_ID
+    yumkey = YUMMLY_APP_KEY
+    
     #calls the Yummly API to return the JSON for a specific recipe, and extracts the sourceRecipeUrl
     @url_y = "http://api.yummly.com/v1/api/recipe/#{params[:id]}?_app_id="+yumid+"&_app_key="+yumkey
     @title = JSON.load(open(@url_y))['name']
