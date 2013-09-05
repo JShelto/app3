@@ -16,11 +16,14 @@ class RecipesController < ApplicationController
       @course = "Lunch and Snacks"
     end
 
+    yumid = YUMMLY_APP_ID
+    yumkey = YUMMLY_APP_KEY
+
     #calls the Yummly API with search params to return an index of recipes
     if @course.blank?
-      @url = URI::encode("http://api.yummly.com/v1/api/recipes?_app_id=8d5e3383&_app_key=47fc2ecd5c96686fee4cdae0725ad816&q=#{@search}&maxTotalTimeInSeconds=#{@seconds}")
+      @url = URI::encode("http://api.yummly.com/v1/api/recipes?_app_id="+yumid+"&_app_key="+yumkey+"&q=#{@search}&maxTotalTimeInSeconds=#{@seconds}")
     else
-      @url = URI::encode("http://api.yummly.com/v1/api/recipes?_app_id=8d5e3383&_app_key=47fc2ecd5c96686fee4cdae0725ad816&q=#{@search}&allowedCourse[]=course^course-#{@course}&maxTotalTimeInSeconds=#{@seconds}")
+      @url = URI::encode("http://api.yummly.com/v1/api/recipes?_app_id="+yumid+"&_app_key="+yumkey+"&q=#{@search}&allowedCourse[]=course^course-#{@course}&maxTotalTimeInSeconds=#{@seconds}")
     end
 
     @response = JSON.load(open(@url))["matches"].map {|listing| 
@@ -35,7 +38,7 @@ class RecipesController < ApplicationController
 
   def show
     #calls the Yummly API to return the JSON for a specific recipe, and extracts the sourceRecipeUrl
-    @url_y = "http://api.yummly.com/v1/api/recipe/#{params[:id]}?_app_id=8d5e3383&_app_key=47fc2ecd5c96686fee4cdae0725ad816"
+    @url_y = "http://api.yummly.com/v1/api/recipe/#{params[:id]}?_app_id="+yumid+"&_app_key="+yumkey
     @title = JSON.load(open(@url_y))['name']
     @img = JSON.load(open(@url_y))["images"].map { |pic|
       {"bigPic" => pic["hostedLargeUrl"]}

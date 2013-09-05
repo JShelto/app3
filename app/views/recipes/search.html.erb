@@ -1,26 +1,26 @@
 <%= render "users/navigation" %>
 <%= render "recipe_query" %>
 
-<div class="large-12 columns">
-
-  <center><h1> Recipes </h1></center>
-  <% if @response.empty? %>
-  <div class="small-12 columns">
-    <center><h1><%= blank_message -%> </h1></center>
-  </div>
-  <% else %>
-    <% @response.each do |x| %>
-      <%= link_to(:controller => "recipes", :action => "show", :id => x["recipeId"]) do %>
-        <div style="background-color: #F78D3F">
-          <h3> <%= x["name"] %> </h3> <br>
-          <img src="<%= x["image"] %>" height="100" width="100"> 
-          <div style="color: #102E37">
-            Estimated prep time: <%= x["time"] %> minutes
-          </div>
-        </div> 
+<div class="row">
+  <div class="large-5 push-4 columns">
+    <center><h1> Recipes </h1></center>
+    <% if @response.empty? %>
+    <div class="small-12 columns">
+      <center><h1><%= blank_message -%> </h1></center>
+    </div>
+    <% else %>
+      <% @response.each do |x| %>
+        <%= link_to(:controller => "recipes", :action => "show", :id => x["recipeId"]) do %>
+          <div style="background-color: #F78D3F">
+            <h3> <%= x["name"] %> </h3> <br>
+            <img src="<%= x["image"] %>" height="100" width="100"> 
+            <div style="color: #102E37">
+              Estimated prep time: <%= x["time"] %> minutes
+            </div>
+          </div> 
+        <% end %>
       <% end %>
-    <% end %>
-  <% end %>
-    
+    <% end %>  
+  </div>  
 </div>
 

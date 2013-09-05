@@ -2,6 +2,7 @@
 @import "foundation/foundation-global";
 
 // Settings file to override Foundation variables
+@import url(http://fonts.googleapis.com/css?family=Rancho);
 
 // You can find the variables for each component at the bottom of their
 // doc page. We tried to name them to where they'd make sense just by reading them.
@@ -85,7 +86,7 @@
 //
 
 // We use these to control header font styles
-// $header-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+ $header-font-family: 'Rancho', cursive;
 // $header-font-weight: bold;
 // $header-font-style: normal;
  $header-font-color: #fff;
@@ -979,7 +980,7 @@ $topbar-bg: #102E37;
 
 // Controlling the styles for the title in the top bar
 // $topbar-title-weight: bold;
-// $topbar-title-font-size: emCalc(17px);
+ $topbar-title-font-size: emCalc(50px);
 
 // Set the link colors and styles for top-level nav
 // $topbar-link-color: #fff;
