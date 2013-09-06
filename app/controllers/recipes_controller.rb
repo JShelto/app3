@@ -1,4 +1,5 @@
 class RecipesController < ApplicationController
+  require 'open-uri'
 
   def index
     @params = params
