@@ -1,11 +1,11 @@
-<nav class="top-bar" id="tops">
+<nav class="top-bar">
   <ul class="title-area">
     <li class="name">
       <h1><%= link_to "CrunchMate", "/home" %></h1>
     </li>
   </ul>
   <section class="top-bar-section">
-    <ul class="right">
+    <ul class="right" style="padding: 0 0 20 0;">
       <% if current_user %>
         <li class="divider"></li>
         <li class="has-form">Signed in as <strong><%= link_to current_user.username.capitalize, "/home" %></strong></li>
@@ -17,3 +17,4 @@
     </ul>
   </section>
 </nav>
+
