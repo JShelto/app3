@@ -26,9 +26,9 @@ class RecipesController < ApplicationController
 
     #calls the Yummly API with search params to return an index of recipes
     if @course.blank?
-      @url = URI::encode("http://api.yummly.com/v1/api/recipes?_app_id="+yumid+"&_app_key="+yumkey+"&q=#{@search}&maxTotalTimeInSeconds=#{@seconds}")
+      @url = URI::encode("api.yummly.com/v1/api/recipes?_app_id="+yumid+"&_app_key="+yumkey+"&q=#{@search}&maxTotalTimeInSeconds=#{@seconds}")
     else
-      @url = URI::encode("http://api.yummly.com/v1/api/recipes?_app_id="+yumid+"&_app_key="+yumkey+"&q=#{@search}&allowedCourse[]=course^course-#{@course}&maxTotalTimeInSeconds=#{@seconds}")
+      @url = URI::encode("api.yummly.com/v1/api/recipes?_app_id="+yumid+"&_app_key="+yumkey+"&q=#{@search}&allowedCourse[]=course^course-#{@course}&maxTotalTimeInSeconds=#{@seconds}")
     end
 
     @response = JSON.load(open(@url))["matches"].map {|listing| 

@@ -5,6 +5,8 @@ Crunchmate::Application.routes.draw do
   resources :users 
   resources :sessions, only: [:new, :create, :destroy]
 
+  match '/home' => "recipes#index"
+
   match 'auth/:provider/callback' => 'sessions#create'
 
   get '/recipes/search', to: 'recipes#search'
