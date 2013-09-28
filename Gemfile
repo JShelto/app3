@@ -5,7 +5,7 @@ gem 'bcrypt-ruby', '3.0.1'
 gem 'haml'
 gem 'omniauth-twitter'
 gem 'omniauth-facebook'
-
+gem 'newrelic_rpm'
 
 
 # Bundle edge Rails instead:
