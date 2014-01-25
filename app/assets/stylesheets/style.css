@@ -1,0 +1,11 @@
+.name {
+  text-align: center;
+}
+
+.recipe, .ingredients {
+  height: 450px;
+}
+
+.ingredients li{
+  margin: 0 auto;
+}

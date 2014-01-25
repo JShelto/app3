@@ -1,8 +1,9 @@
+<% content_for :title, "CrunchMate | #{@title}" %>
 <%= render "users/navigation" %>
 <%= render "recipe_query" %></br>
 
 <div class="row">
-  <div class="large-6 columns" style="background-color: #F78D3F">
+  <div class="recipe large-6 columns" style="background-color: #F78D3F">
     <center>
       <h1><%= @title %></h1></br>
       <strong>Prep Time:</strong> <%= @prep %> </br>
@@ -24,7 +25,7 @@
       </a>
 
   </div>
-  <div class="large-6 columns" style="background-color: #102E37">
+  <div class="ingredients large-6 columns" style="background-color: #102E37">
     <center>
       <h3 style="color: #F78D3F; background-color: #fff">Ingredients</h3>
       <ul class="no-bullet" style="color: #F78D3F">
