@@ -1,0 +1,85 @@
+<div class="row">
+  <%= form_tag({controller: "recipes", action: "search"}, method: :get) do %> 
+    <div class="row large 12-columns">
+
+      <div class="large-2 columns">
+        <div class="row">
+          <div class="large-5 columns">
+            <label for="right-label" class="left inline"><strong>I have</strong></label>
+          </div>
+          <div class="large-7 pull-2 columns">
+            <select id="customDropdown1" name="hours" class="tiny button dropdown secondary"> 
+              <option> <%= 0 %> </option> 
+              <option> <%= 1 %> </option> 
+              <% (2..10).each do |i| %> 
+              <option> <%= i %>  </option>
+              <% end %>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="large-2 columns">
+        <div class="row">
+          <div class="large-5  pull-2 columns">
+            <label for="right-label" class="left inline"><strong>hour(s)</strong></label>
+          </div>
+          <div class="large-7 pull-3 columns">
+            <select id="customDropdown2" name="minutes" class="tiny button dropdown secondary"> 
+              <option> <%= 1 %> </option>
+              <% (2..60).each do |i| %> 
+              <option> <%= i %>  </option>
+              <% end %>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="large-4 columns">
+        <div class="row">
+          <div class="large-2 pull-2 columns">
+            <label for="right-label" class="left inline"> <strong>minute(s)</strong></label>
+          </div>
+          <div class="large-5 pull-2 columns">
+            <label for="right-label" class="left inline"><strong>to make something </strong> </label>
+          </div>
+          <div class="large-5 pull-2 columns">
+            <input type="search" name="search" placeholder="baked ziti..." results="0">
+          </div>
+        </div>
+      </div>
+
+      <div class="large-4 columns">
+        <div class="row">
+          <div class="large-3 pull-2 columns">
+            <label for="right-label" class="left inline"><strong>-related,</strong></label>
+          </div>
+          <div class="large-2 pull-2 columns">
+            <label for="right-label" class="left inline"><strong> for</strong></label>
+          </div>
+          <div class="large-5 pull-3 columns">
+            <select id="customDropdown3" name="courses" class="tiny button dropdown"> 
+            <option> <%= "" %> </option>
+            <option> <%= "Appetizers" %> </option>
+            <option> <%= "Breakfasts" %> </option>
+            <option> <%= "Beverages" %> </option>
+            <option> <%= "Cocktails" %> </option>   
+            <option> <%= "Desserts" %> </option>
+            <option> <%= "Lunch" %> </option>
+            <option> <%= "Main Dishes" %> </option> 
+            <option> <%= "Salads" %> </option> 
+            <option> <%= "Side Dishes" %> </option> 
+            <option> <%= "Snacks" %> </option>  
+            </select>
+          </div>
+          <div class="large-2 pull-2 columns">
+            <%= submit_tag "Go!", class: "small button radius" %>
+          </div>
+        </div>
+      </div>
+
+    </div>  
+
+  <% end %>
+</div>
+
