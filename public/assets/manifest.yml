@@ -1,0 +1,25 @@
+---
+facebook_icon.png: facebook_icon-679107b2eda80aa6d8f06c293eb968ed.png
+facebook_icon/index.png: facebook_icon-679107b2eda80aa6d8f06c293eb968ed.png
+fb_logout.png: fb_logout-e6b38809797763c6c573bc673e647169.png
+fb_logout/index.png: fb_logout-e6b38809797763c6c573bc673e647169.png
+sign-in-with-facebook.png: sign-in-with-facebook-0143ecef62f505deb8fe0813d3a16947.png
+sign-in-with-facebook/index.png: sign-in-with-facebook-0143ecef62f505deb8fe0813d3a16947.png
+sign-in-with-twitter.png: sign-in-with-twitter-0c0734019e6434dc1908299e75cf7c3f.png
+sign-in-with-twitter/index.png: sign-in-with-twitter-0c0734019e6434dc1908299e75cf7c3f.png
+social_fb.png: social_fb-c630d1161963eb4df6d7fdfcc5a52aa0.png
+social_fb/index.png: social_fb-c630d1161963eb4df6d7fdfcc5a52aa0.png
+social_tw.png: social_tw-7a696526f0a97df51a30ec60fbf6dc1e.png
+social_tw/index.png: social_tw-7a696526f0a97df51a30ec60fbf6dc1e.png
+twitter_50.png: twitter_50-d16ace429ba058b7371935d372546caf.png
+twitter_50/index.png: twitter_50-d16ace429ba058b7371935d372546caf.png
+application.js: application-8e3d274d0010cfd7631b8d09857c689a.js
+application/index.js: application-8e3d274d0010cfd7631b8d09857c689a.js
+application.css: application-63a6841f972d30f45e2669eda344b007.css
+application/index.css: application-63a6841f972d30f45e2669eda344b007.css
+jquery.min.map: jquery.min-6336c5bca4c709e809647cdfcb484d0a.map
+jquery/index.min.map: jquery.min-6336c5bca4c709e809647cdfcb484d0a.map
+vendor/custom.modernizr.js: vendor/custom.modernizr-a7d5258f68c42509cd151b5d3ebb9aa9.js
+vendor/custom/index.modernizr.js: vendor/custom.modernizr-a7d5258f68c42509cd151b5d3ebb9aa9.js
+vendor/zepto.js: vendor/zepto-48e193dc43051fbe2c03c6276f1f5ff1.js
+vendor/zepto/index.js: vendor/zepto-48e193dc43051fbe2c03c6276f1f5ff1.js
