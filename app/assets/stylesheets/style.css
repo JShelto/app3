@@ -1,5 +1,6 @@
 .name {
   text-align: center;
+  letter-spacing: 5px;
 }
 
 .recipe, .ingredients {
@@ -8,4 +9,40 @@
 
 .ingredients li{
   margin: 0 auto;
+}
+
+.intro {
+  text-align: center;
+}
+
+.intro h1{
+  padding: 100px 0 0 0;
+  color: #102E37;
+}
+
+.intro p {
+  color: #102E37;
+}
+
+
+@media only screen and (max-width: 942px) {
+
+  .name a {
+    font-size: 40px;
+  }
+
+
+  .alt-mobile{
+    display: none;
+  }
+
+  #query-start {
+    padding: 0 0 5px 0;
+  }
+
+  input {
+    margin: 0;
+  }
+
+
 }
