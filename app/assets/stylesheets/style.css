@@ -29,7 +29,11 @@
 
   .name a {
     font-size: 40px;
-    text-align: center;
+  }
+
+
+  .alt-mobile{
+    display: none;
   }
 
   #query-start {
