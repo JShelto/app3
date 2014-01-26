@@ -29,6 +29,7 @@
 
   .name a {
     font-size: 40px;
+    margin: 0 auto;
   }
 
 
@@ -44,5 +45,8 @@
     margin: 0;
   }
 
+  select {
+    width: calc(75%);
+  }
 
 }
