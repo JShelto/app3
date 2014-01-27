@@ -29,7 +29,11 @@
 
   .name a {
     font-size: 40px;
-    margin: 0 auto;
+    float: left;
+  }
+
+  .recipe, .ingredients {
+    height: auto;
   }
 
 
@@ -45,8 +49,12 @@
     margin: 0;
   }
 
-  select {
-    width: calc(75%);
+  #searchbar, select {
+    width: calc(85%);
+  }
+
+  #searchbar {
+    float: left;
   }
 
 }
