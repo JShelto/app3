@@ -3,8 +3,28 @@
   letter-spacing: 5px;
 }
 
+.recipe {
+  background-color: #F78D3F;
+}
+
+.recipe a:link {
+  color: #fff;
+}
+
+.recipe a:hover {
+  color: #248EAD;
+}
+
 .recipe, .ingredients {
   height: 450px;
+}
+
+.facebook-share a:link {
+  color: #102E37;
+}
+
+.ingredients {
+  background-color: #102E37;
 }
 
 .ingredients li{

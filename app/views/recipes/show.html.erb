@@ -3,18 +3,18 @@
 <%= render "recipe_query" %></br>
 
 <div class="row">
-  <div class="recipe large-6 columns" style="background-color: #F78D3F">
+  <div class="recipe large-6 columns">
     <center>
       <h1><%= @title %></h1></br>
       <strong>Prep Time:</strong> <%= @prep %> </br>
       <a href="<%=@site %>"> Check out this recipe on <%= @location %> </a> </br>
-      <% @img.each do |i| %>
+      <a href="<%=@site %>"> <% @img.each do |i| %>
         <img src="<%= i["bigPic"] %>">
-      <% end %></br>
+      <% end %></a> </br>
       </center>
       <a href="https://twitter.com/share" class="twitter-share-button" data-text="Thanks to Crunch-Mate, I was able to find a recipe for <%= @title %>!" data-count="none" data-hashtags="delicious" data-dnt="true">Tweet</a>
       <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-      <a href="#" 
+      <a href="#"
         onclick="
           window.open(
             'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href), 
@@ -25,7 +25,7 @@
       </a>
 
   </div>
-  <div class="ingredients large-6 columns" style="background-color: #102E37">
+  <div class="ingredients large-6 columns">
     <center>
       <h3 style="color: #F78D3F; background-color: #fff">Ingredients</h3>
       <ul class="no-bullet" style="color: #F78D3F">
